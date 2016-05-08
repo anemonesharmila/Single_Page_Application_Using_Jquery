@@ -17,13 +17,15 @@ and open the template in the editor.
 
 
         <div id="top">
-            <a href="javascript:void(0)" id="hide">hide form</a>  &nbsp; &nbsp; &nbsp;
-            <a href="javascript:void(0)" id="show">show form</a>
+            <h5 id="title"></h5>
         </div>
 
+        <button id="hide">hide</button>
+        <button id="show">show</button>
+        </br>
         <div id="form-group" >
 
-            <p id="title"></p>
+
             <form  id="myform" name="myform">
 
                 <input type="text" name="firstName" placeholder="First Name" class="form-control"/></br>
@@ -35,11 +37,12 @@ and open the template in the editor.
                 <input type="text" name="address" placeholder="Address " class="form-control"/></br></br>
                 <button type="submit" id="saveBtn">save</button>
             </form>
+            </br>
         </div>
         <button id="showTableBtn" >Show student information table</button>
         <button id="hideTableBtn" >Hide student information table</button>
         <div id="output">
-            <table class="table table-bordered table-hover" id="mytable">
+            <table class="table table-bordered table-hover table-striped" id="mytable">
                 <tr>
                     <th>id</th>
                     <th>First name</th>
@@ -61,8 +64,32 @@ and open the template in the editor.
 
                 });
 
+                $("#show").css("display", "none");
+                $("#showTableBtn").css("display", "none");
 
+                $("#hide").on("click", function () {
+                    $("#form-group").hide(2000);
+                    $("#hide").css("display", "none");
+                    $("#show").css("display", "block");
+                });
 
+                $("#show").on("click", function () {
+                    $("#form-group").show(1000);
+                    $("#hide").css("display", "block");
+                    $("#show").css("display", "none");
+                });
+
+                $("#showTableBtn").on("click", function () {
+                    $("#output").show(1000);
+                    $("#hideTableBtn").css("display", "block");
+                    $("#showTableBtn").css("display", "none");
+
+                });
+                $("#hideTableBtn").on("click", function () {
+                    $("#output").hide(1000);
+                    $("#hideTableBtn").css("display", "none");
+                    $("#showTableBtn").css("display", "block");
+                });
 
                 $.getJSON("api/studentapi", null, function (data) {
                     var content = "";
@@ -84,39 +111,9 @@ and open the template in the editor.
                     return false;
                 });
             });
-            $("#hide").on("click", function () {
-                $("#form-group").hide(2000);
-            });
 
-            $("#show").on("click", function () {
-                $("#form-group").show(1000);
-            });
 
-            $("#showTableBtn").on("click", function () {
-                $("#output").show(1000);
-                $("#hideTableBtn").css("display", "block");
-                $("#showTableBtn").css("display", "none");
 
-            });
-            $("#hideTableBtn").on("click", function () {
-                $("#output").hide(1000);
-                $("#hideTableBtn").css("display", "none");
-                $("#showTableBtn").css("display", "block");
-            });
-
-            if ($("#output").css("display", "none")) {
-                $("#hideTableBtn").css("display", "none");
-                $("#showTableBtn").css("display", "block");
-
-            }
-
-            else if ($("#output").css("display", "block")) {
-                $("#showTableBtn").css("display", "none");
-
-            }
-            else {
-                $("#hideTableBtn").css("display", "none");
-            }
         </script>            
     </body>
 </html>

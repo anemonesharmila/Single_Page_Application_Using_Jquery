@@ -6,10 +6,9 @@
 
 <%@page import="java.util.Calendar"%>
 <%
-   
-        out.println("<center>Welcome!! This is student info page </center>");
-    
-    
-    Calendar calendar=Calendar.getInstance();
-    out.println(calendar.getTime());
+
+    out.println("<center>Welcome!! This is student info page </center>");
+    Calendar calendar = Calendar.getInstance();
+    out.println("<center>" + calendar.getTime() + "</center>"
+    );
 %>
