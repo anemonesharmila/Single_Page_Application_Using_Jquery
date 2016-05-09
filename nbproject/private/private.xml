@@ -5,9 +5,9 @@
         <group>
             <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/src/java/com/karki/JQuerySample/api/StudentAPI.java</file>
             <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/web/index.html</file>
-            <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/web/serverpages/page1.jsp</file>
-            <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/web/serverpages/StudentInfo.jsp</file>
-            <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/web/serverpages/learningJQuery.jsp</file>
+            <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/src/java/com/karki/JQuerySample/entity/Student.java</file>
+            <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/src/java/com/karki/JQuerySample/dao/StudentDao.java</file>
+            <file>file:/C:/Users/sharmila/Documents/NetBeansProjects/JQuerySample/src/java/com/karki/JQuerySample/dao/impl/StudentDaoImpl.java</file>
         </group>
     </open-files>
 </project-private>
